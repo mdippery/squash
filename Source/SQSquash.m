@@ -34,6 +34,7 @@
     _statusItem = [[bar statusItemWithLength:NSSquareStatusItemLength] retain];
     [_statusItem setImage:[self statusMenuImage]];
     [_statusItem setHighlightMode:YES];
+    [_statusItem setMenu:[self statusMenu]];
 }
 
 - (NSImage *)statusMenuImage

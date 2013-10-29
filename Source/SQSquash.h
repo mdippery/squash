@@ -15,4 +15,6 @@
     NSStatusItem *_statusItem;
 }
 
+@property (assign) IBOutlet NSMenu *statusMenu;
+
 @end
