@@ -33,12 +33,10 @@
 - (void)activateStatusMenu
 {
     NSStatusBar *bar = [NSStatusBar systemStatusBar];
-    NSRect frame = NSMakeRect(0, 0, 24, 24);
-    NSView *view = [[[SQStatusMenuItemView alloc] initWithFrame:frame] autorelease];
     _statusItem = [[bar statusItemWithLength:NSSquareStatusItemLength] retain];
-    //[_statusItem setImage:[self statusMenuImage]];
+    NSRect frame = NSMakeRect(0, 0, [_statusItem length], [bar thickness]);
+    NSView *view = [[[SQStatusMenuItemView alloc] initWithFrame:frame] autorelease];
     [_statusItem setView:view];
-    [_statusItem setHighlightMode:YES];
     [_statusItem setMenu:[self statusMenu]];
 }
 
