@@ -7,12 +7,13 @@
 //
 
 #import "SQSquash.h"
+
 #import <dispatch/dispatch.h>
+#import "SQStatusMenuItemView.h"
 
 
 @interface SQSquash ()
 - (void)activateStatusMenu;
-- (NSImage *)statusMenuImage;
 @end
 
 
@@ -32,8 +33,11 @@
 - (void)activateStatusMenu
 {
     NSStatusBar *bar = [NSStatusBar systemStatusBar];
+    NSRect frame = NSMakeRect(0, 0, 24, 24);
+    NSView *view = [[[SQStatusMenuItemView alloc] initWithFrame:frame] autorelease];
     _statusItem = [[bar statusItemWithLength:NSSquareStatusItemLength] retain];
-    [_statusItem setImage:[self statusMenuImage]];
+    //[_statusItem setImage:[self statusMenuImage]];
+    [_statusItem setView:view];
     [_statusItem setHighlightMode:YES];
     [_statusItem setMenu:[self statusMenu]];
 }
