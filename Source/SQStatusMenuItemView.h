@@ -12,7 +12,11 @@
 @interface SQStatusMenuItemView : NSView
 {
 @private
-    BOOL _menuIsOpen;
+    NSStatusItem *_statusItem;
 }
+
+@property (nonatomic, assign, getter=isHighlighted) BOOL highlighted;
+
+- (id)initWithStatusItem:(NSStatusItem *)statusItem;
 
 @end

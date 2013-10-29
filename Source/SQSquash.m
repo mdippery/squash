@@ -34,8 +34,7 @@
 {
     NSStatusBar *bar = [NSStatusBar systemStatusBar];
     _statusItem = [[bar statusItemWithLength:NSSquareStatusItemLength] retain];
-    NSRect frame = NSMakeRect(0, 0, [_statusItem length], [bar thickness]);
-    NSView *view = [[[SQStatusMenuItemView alloc] initWithFrame:frame] autorelease];
+    NSView *view = [[[SQStatusMenuItemView alloc] initWithStatusItem:_statusItem] autorelease];
     [_statusItem setView:view];
     [_statusItem setMenu:[self statusMenu]];
 }
