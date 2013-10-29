@@ -42,10 +42,18 @@
     return [NSImage imageNamed:@"StatusIcon.png"];
 }
 
-#pragma mark NSApp delegate
+#pragma mark NSApp Delegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
+}
+
+#pragma mark UI Actions
+
+- (IBAction)minifyJavaScript:(id)sender
+{
+    NSString *jsmin = [[NSBundle mainBundle] pathForAuxiliaryExecutable:@"jsmin"];
+    NSLog(@"%@", jsmin);
 }
 
 @end

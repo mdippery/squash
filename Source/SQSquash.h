@@ -17,4 +17,6 @@
 
 @property (assign) IBOutlet NSMenu *statusMenu;
 
+- (IBAction)minifyJavaScript:(id)sender;
+
 @end

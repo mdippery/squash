@@ -12,7 +12,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
-        <customObject id="lVt-pz-H9L" customClass="SQSquash">
+        <customObject id="lVt-pz-H9L" userLabel="Application" customClass="SQSquash">
             <connections>
                 <outlet property="statusMenu" destination="cDK-zy-e0t" id="OAt-Y0-DmO"/>
             </connections>
@@ -32,6 +32,13 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="149"/>
+                <menuItem title="Minify" id="q2V-75-qad">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="minifyJavaScript:" target="lVt-pz-H9L" id="2Dr-fk-ybj"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="zI5-rU-Ua3"/>
                 <menuItem title="Quit Squash" id="136">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
