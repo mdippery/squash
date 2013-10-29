@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Michael Dippery. All rights reserved.
 //
 
-#import "SQAppDelegate.h"
+#import "SQSquash.h"
 
-@implementation SQAppDelegate
+
+@implementation SQSquash
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
 }
 
 @end

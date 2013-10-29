@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B75F4404181FA2A2006DE91F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75F4406181FA2A2006DE91F /* MainMenu.xib */; };
 		B7FD9F74181FA06900D85B0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F73181FA06900D85B0A /* Cocoa.framework */; };
 		B7FD9F7E181FA06900D85B0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7FD9F7C181FA06900D85B0A /* InfoPlist.strings */; };
 		B7FD9F80181FA06900D85B0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FD9F7F181FA06900D85B0A /* main.m */; };
 		B7FD9F84181FA06900D85B0A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B7FD9F82181FA06900D85B0A /* Credits.rtf */; };
-		B7FD9F87181FA06900D85B0A /* SQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FD9F86181FA06900D85B0A /* SQAppDelegate.m */; };
-		B7FD9F8A181FA06900D85B0A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FD9F88181FA06900D85B0A /* MainMenu.xib */; };
+		B7FD9F87181FA06900D85B0A /* SQSquash.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FD9F86181FA06900D85B0A /* SQSquash.m */; };
 		B7FD9F8C181FA06900D85B0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7FD9F8B181FA06900D85B0A /* Images.xcassets */; };
 		B7FD9F93181FA06900D85B0A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F92181FA06900D85B0A /* XCTest.framework */; };
 		B7FD9F94181FA06900D85B0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F73181FA06900D85B0A /* Cocoa.framework */; };
@@ -31,23 +31,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B75F4405181FA2A2006DE91F /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B7FD9F70181FA06900D85B0A /* Squash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FD9F73181FA06900D85B0A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B7FD9F76181FA06900D85B0A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B7FD9F77181FA06900D85B0A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B7FD9F78181FA06900D85B0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B7FD9F7B181FA06900D85B0A /* Squash-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Squash-Info.plist"; sourceTree = "<group>"; };
+		B7FD9F7B181FA06900D85B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7FD9F7D181FA06900D85B0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B7FD9F7F181FA06900D85B0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7FD9F81181FA06900D85B0A /* Squash-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Squash-Prefix.pch"; sourceTree = "<group>"; };
 		B7FD9F83181FA06900D85B0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		B7FD9F85181FA06900D85B0A /* SQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQAppDelegate.h; sourceTree = "<group>"; };
-		B7FD9F86181FA06900D85B0A /* SQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQAppDelegate.m; sourceTree = "<group>"; };
-		B7FD9F89181FA06900D85B0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B7FD9F85181FA06900D85B0A /* SQSquash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQSquash.h; sourceTree = "<group>"; };
+		B7FD9F86181FA06900D85B0A /* SQSquash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQSquash.m; sourceTree = "<group>"; };
 		B7FD9F8B181FA06900D85B0A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B7FD9F91181FA06900D85B0A /* SquashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FD9F92181FA06900D85B0A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B7FD9F99181FA06900D85B0A /* SquashTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SquashTests-Info.plist"; sourceTree = "<group>"; };
+		B7FD9F99181FA06900D85B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7FD9F9B181FA06900D85B0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B7FD9F9D181FA06900D85B0A /* SquashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquashTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,11 +73,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B75F4400181FA172006DE91F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD9F7B181FA06900D85B0A /* Info.plist */,
+				B7FD9F7C181FA06900D85B0A /* InfoPlist.strings */,
+				B7FD9F82181FA06900D85B0A /* Credits.rtf */,
+				B7FD9F8B181FA06900D85B0A /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		B75F4401181FA284006DE91F /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				B75F4406181FA2A2006DE91F /* MainMenu.xib */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
 		B7FD9F67181FA06900D85B0A = {
 			isa = PBXGroup;
 			children = (
 				B7FD9F79181FA06900D85B0A /* Squash */,
-				B7FD9F97181FA06900D85B0A /* SquashTests */,
+				B7FD9F97181FA06900D85B0A /* Tests */,
 				B7FD9F72181FA06900D85B0A /* Frameworks */,
 				B7FD9F71181FA06900D85B0A /* Products */,
 			);
@@ -115,40 +134,38 @@
 		B7FD9F79181FA06900D85B0A /* Squash */ = {
 			isa = PBXGroup;
 			children = (
-				B7FD9F85181FA06900D85B0A /* SQAppDelegate.h */,
-				B7FD9F86181FA06900D85B0A /* SQAppDelegate.m */,
-				B7FD9F88181FA06900D85B0A /* MainMenu.xib */,
-				B7FD9F8B181FA06900D85B0A /* Images.xcassets */,
-				B7FD9F7A181FA06900D85B0A /* Supporting Files */,
+				B7FD9F85181FA06900D85B0A /* SQSquash.h */,
+				B7FD9F86181FA06900D85B0A /* SQSquash.m */,
+				B75F4401181FA284006DE91F /* Interface */,
+				B75F4400181FA172006DE91F /* Resources */,
+				B7FD9F7A181FA06900D85B0A /* Other Sources */,
 			);
-			path = Squash;
+			name = Squash;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		B7FD9F7A181FA06900D85B0A /* Supporting Files */ = {
+		B7FD9F7A181FA06900D85B0A /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B7FD9F7B181FA06900D85B0A /* Squash-Info.plist */,
-				B7FD9F7C181FA06900D85B0A /* InfoPlist.strings */,
 				B7FD9F7F181FA06900D85B0A /* main.m */,
 				B7FD9F81181FA06900D85B0A /* Squash-Prefix.pch */,
-				B7FD9F82181FA06900D85B0A /* Credits.rtf */,
 			);
-			name = "Supporting Files";
+			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		B7FD9F97181FA06900D85B0A /* SquashTests */ = {
+		B7FD9F97181FA06900D85B0A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				B7FD9F9D181FA06900D85B0A /* SquashTests.m */,
 				B7FD9F98181FA06900D85B0A /* Supporting Files */,
 			);
-			path = SquashTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		B7FD9F98181FA06900D85B0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B7FD9F99181FA06900D85B0A /* SquashTests-Info.plist */,
+				B7FD9F99181FA06900D85B0A /* Info.plist */,
 				B7FD9F9A181FA06900D85B0A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -234,7 +251,7 @@
 				B7FD9F7E181FA06900D85B0A /* InfoPlist.strings in Resources */,
 				B7FD9F8C181FA06900D85B0A /* Images.xcassets in Resources */,
 				B7FD9F84181FA06900D85B0A /* Credits.rtf in Resources */,
-				B7FD9F8A181FA06900D85B0A /* MainMenu.xib in Resources */,
+				B75F4404181FA2A2006DE91F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7FD9F87181FA06900D85B0A /* SQAppDelegate.m in Sources */,
+				B7FD9F87181FA06900D85B0A /* SQSquash.m in Sources */,
 				B7FD9F80181FA06900D85B0A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +294,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B75F4406181FA2A2006DE91F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B75F4405181FA2A2006DE91F /* en */,
+			);
+			name = MainMenu.xib;
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
 		B7FD9F7C181FA06900D85B0A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,14 +317,6 @@
 				B7FD9F83181FA06900D85B0A /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		B7FD9F88181FA06900D85B0A /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7FD9F89181FA06900D85B0A /* Base */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		B7FD9F9A181FA06900D85B0A /* InfoPlist.strings */ = {
@@ -386,8 +404,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Squash/Squash-Prefix.pch";
-				INFOPLIST_FILE = "Squash/Squash-Info.plist";
+				GCC_PREFIX_HEADER = "Source/Squash-Prefix.pch";
+				INFOPLIST_FILE = Resources/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -399,8 +417,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Squash/Squash-Prefix.pch";
-				INFOPLIST_FILE = "Squash/Squash-Info.plist";
+				GCC_PREFIX_HEADER = "Source/Squash-Prefix.pch";
+				INFOPLIST_FILE = Resources/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -421,7 +439,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SquashTests/SquashTests-Info.plist";
+				INFOPLIST_FILE = Tests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -439,7 +457,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Squash/Squash-Prefix.pch";
-				INFOPLIST_FILE = "SquashTests/SquashTests-Info.plist";
+				INFOPLIST_FILE = Tests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -465,6 +483,7 @@
 				B7FD9FA3181FA06900D85B0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7FD9FA4181FA06900D85B0A /* Build configuration list for PBXNativeTarget "SquashTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +492,7 @@
 				B7FD9FA6181FA06900D85B0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
