@@ -10,5 +10,9 @@
 
 
 @interface SQSquash : NSObject <NSApplicationDelegate>
+{
+@private
+    NSStatusItem *_statusItem;
+}
 
 @end
