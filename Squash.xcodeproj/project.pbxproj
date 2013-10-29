@@ -10,6 +10,7 @@
 		B75F4404181FA2A2006DE91F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75F4406181FA2A2006DE91F /* MainMenu.xib */; };
 		B75F4409181FA6C8006DE91F /* StatusIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B75F4408181FA6C8006DE91F /* StatusIcon.png */; };
 		B7FD21D7182035100063EA2D /* jsmin.c in Sources */ = {isa = PBXBuildFile; fileRef = B7FD21D6182035100063EA2D /* jsmin.c */; };
+		B7FD21DB182036990063EA2D /* jsmin in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7FD21CB182034D10063EA2D /* jsmin */; };
 		B7FD9F74181FA06900D85B0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F73181FA06900D85B0A /* Cocoa.framework */; };
 		B7FD9F7E181FA06900D85B0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7FD9F7C181FA06900D85B0A /* InfoPlist.strings */; };
 		B7FD9F80181FA06900D85B0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FD9F7F181FA06900D85B0A /* main.m */; };
@@ -23,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B7FD21D8182035670063EA2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7FD9F68181FA06900D85B0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7FD21CA182034D10063EA2D;
+			remoteInfo = jsmin;
+		};
 		B7FD9F95181FA06900D85B0A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B7FD9F68181FA06900D85B0A /* Project object */;
@@ -41,6 +49,16 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B7FD21DA1820368A0063EA2D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				B7FD21DB182036990063EA2D /* jsmin in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -242,10 +260,12 @@
 				B7FD9F6C181FA06900D85B0A /* Sources */,
 				B7FD9F6D181FA06900D85B0A /* Frameworks */,
 				B7FD9F6E181FA06900D85B0A /* Resources */,
+				B7FD21DA1820368A0063EA2D /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B7FD21D9182035670063EA2D /* PBXTargetDependency */,
 			);
 			name = Squash;
 			productName = Squash;
@@ -357,6 +377,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B7FD21D9182035670063EA2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7FD21CA182034D10063EA2D /* jsmin */;
+			targetProxy = B7FD21D8182035670063EA2D /* PBXContainerItemProxy */;
+		};
 		B7FD9F96181FA06900D85B0A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B7FD9F6F181FA06900D85B0A /* Squash */;
