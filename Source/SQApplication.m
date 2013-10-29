@@ -6,18 +6,18 @@
 //  Copyright (c) 2013 Michael Dippery. All rights reserved.
 //
 
-#import "SQSquash.h"
+#import "SQApplication.h"
 
 #import <dispatch/dispatch.h>
 #import "SQStatusMenuItemView.h"
 
 
-@interface SQSquash ()
+@interface SQApplication ()
 - (void)activateStatusMenu;
 @end
 
 
-@implementation SQSquash
+@implementation SQApplication
 
 - (void)awakeFromNib
 {

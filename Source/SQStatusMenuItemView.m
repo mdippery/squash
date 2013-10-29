@@ -7,7 +7,7 @@
 //
 
 #import "SQStatusMenuItemView.h"
-#import "SQSquash.h"
+#import "SQApplication.h"
 
 
 @implementation SQStatusMenuItemView
@@ -33,7 +33,7 @@
 
     [_statusItem drawStatusBarBackgroundInRect:rect withHighlight:self.isHighlighted];
 
-    NSImage *icon = [(SQSquash *) [NSApp delegate] statusMenuImage];
+    NSImage *icon = [(SQApplication *) [NSApp delegate] statusMenuImage];
     NSSize iconSize = [icon size];
     CGFloat x = (rect.size.width - iconSize.width) / 2;
     CGFloat y = (rect.size.height - iconSize.height) / 2;

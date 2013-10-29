@@ -17,7 +17,7 @@
 		B7FD9F7E181FA06900D85B0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7FD9F7C181FA06900D85B0A /* InfoPlist.strings */; };
 		B7FD9F80181FA06900D85B0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FD9F7F181FA06900D85B0A /* main.m */; };
 		B7FD9F84181FA06900D85B0A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B7FD9F82181FA06900D85B0A /* Credits.rtf */; };
-		B7FD9F87181FA06900D85B0A /* SQSquash.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FD9F86181FA06900D85B0A /* SQSquash.m */; };
+		B7FD9F87181FA06900D85B0A /* SQApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FD9F86181FA06900D85B0A /* SQApplication.m */; };
 		B7FD9F8C181FA06900D85B0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7FD9F8B181FA06900D85B0A /* Images.xcassets */; };
 		B7FD9F93181FA06900D85B0A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F92181FA06900D85B0A /* XCTest.framework */; };
 		B7FD9F94181FA06900D85B0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F73181FA06900D85B0A /* Cocoa.framework */; };
@@ -82,8 +82,8 @@
 		B7FD9F7F181FA06900D85B0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7FD9F81181FA06900D85B0A /* Squash-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Squash-Prefix.pch"; sourceTree = "<group>"; };
 		B7FD9F83181FA06900D85B0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		B7FD9F85181FA06900D85B0A /* SQSquash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQSquash.h; sourceTree = "<group>"; };
-		B7FD9F86181FA06900D85B0A /* SQSquash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQSquash.m; sourceTree = "<group>"; };
+		B7FD9F85181FA06900D85B0A /* SQApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQApplication.h; sourceTree = "<group>"; };
+		B7FD9F86181FA06900D85B0A /* SQApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQApplication.m; sourceTree = "<group>"; };
 		B7FD9F8B181FA06900D85B0A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B7FD9F91181FA06900D85B0A /* SquashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FD9F92181FA06900D85B0A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -204,8 +204,8 @@
 		B7FD9F79181FA06900D85B0A /* Squash */ = {
 			isa = PBXGroup;
 			children = (
-				B7FD9F85181FA06900D85B0A /* SQSquash.h */,
-				B7FD9F86181FA06900D85B0A /* SQSquash.m */,
+				B7FD9F85181FA06900D85B0A /* SQApplication.h */,
+				B7FD9F86181FA06900D85B0A /* SQApplication.m */,
 				B75F4401181FA284006DE91F /* Interface */,
 				B75F4400181FA172006DE91F /* Resources */,
 				B7FD9F7A181FA06900D85B0A /* Other Sources */,
@@ -371,7 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B75F440C181FAB7A006DE91F /* SQStatusMenuItemView.m in Sources */,
-				B7FD9F87181FA06900D85B0A /* SQSquash.m in Sources */,
+				B7FD9F87181FA06900D85B0A /* SQApplication.m in Sources */,
 				B7FD9F80181FA06900D85B0A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
