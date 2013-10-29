@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B75F4405181FA2A2006DE91F /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B75F4405181FA2A2006DE91F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B7FD9F70181FA06900D85B0A /* Squash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FD9F73181FA06900D85B0A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B7FD9F76181FA06900D85B0A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
