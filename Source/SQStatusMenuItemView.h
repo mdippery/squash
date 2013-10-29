@@ -10,5 +10,9 @@
 
 
 @interface SQStatusMenuItemView : NSView
+{
+@private
+    BOOL _menuIsOpen;
+}
 
 @end
