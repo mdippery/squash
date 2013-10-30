@@ -56,7 +56,6 @@
     NSString *jsminPath = [bundle pathForAuxiliaryExecutable:@"jsmin"];
     NSString *jsData = [bundle pathForResource:@"jsmin-test" ofType:@"js"];
     jsData = [NSString stringWithContentsOfFile:jsData encoding:NSUTF8StringEncoding error:NULL];
-    NSLog(@"%@", jsData);
 
     NSTask *task = [[NSTask alloc] init];
     [task setLaunchPath:jsminPath];
@@ -71,24 +70,13 @@
     [task setStandardOutput:readPipe];
 
     [task launch];
-    NSLog(@"Launched task: %@", jsminPath);
 
     [writeHandle writeData:[jsData dataUsingEncoding:NSUTF8StringEncoding]];
-    NSLog(@"Wrote data");
+    [writeHandle closeFile];
 
-    /*
-    NSMutableData *data = [NSMutableData data];
-    NSData *readData;
-    while ((readData = [readHandle availableData]) && [readData length]) {
-        NSLog(@"Reading data");
-        [data appendData:readData];
-    }
-    */
     NSData *data = [readHandle readDataToEndOfFile];
 
-    NSLog(@"========");
     NSString *miniJS = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", miniJS);
 
     [miniJS release];
     [task release];
