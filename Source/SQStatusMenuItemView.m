@@ -18,6 +18,7 @@
     if ((self = [super initWithFrame:frame])) {
         _statusItem = [statusItem retain];
         _isHighlighted = NO;
+        [self registerForDraggedTypes:[NSArray arrayWithObject:NSFilenamesPboardType]];
     }
     return self;
 }
@@ -53,6 +54,45 @@
 - (void)mouseDown:(NSEvent *)event
 {
     [NSApp sendAction:@selector(togglePopover:) to:[NSApp delegate] from:self];
+}
+
+#pragma mark Drag Operations
+
+- (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender
+{
+    NSPasteboard *pboard = [sender draggingPasteboard];
+    NSDragOperation op = [sender draggingSourceOperationMask];
+
+    if ([[pboard types] containsObject:NSFilenamesPboardType] && (op & NSDragOperationCopy)) {
+        if ((op & NSDragOperationCopy)) {
+            return NSDragOperationCopy;
+        } else if ((op & NSDragOperationLink)) {
+            return NSDragOperationLink;
+        }
+    }
+    return NSDragOperationNone;
+}
+
+- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender
+{
+    NSPasteboard *pboard = [sender draggingPasteboard];
+    NSDragOperation op = [sender draggingSourceOperationMask];
+    NSAssert([[pboard types] containsObject:NSFilenamesPboardType], @"Dragged item is not a file");
+    NSAssert((op & NSDragOperationCopy) || (op & NSDragOperationLink), @"Drag operation is not copy or link");
+
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
+    for (NSString *path in files) {
+        BOOL isDir = NO;
+        BOOL exists = [fm fileExistsAtPath:path isDirectory:&isDir];
+        if (!exists || !isDir) {
+            NSLog(@"%@ does not exist or is not a directory", path);
+            return NO;
+        }
+    }
+
+    NSLog(@"Watching directories: %@", files);
+    return YES;
 }
 
 @end
