@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B75F4404181FA2A2006DE91F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75F4406181FA2A2006DE91F /* MainMenu.xib */; };
 		B75F4409181FA6C8006DE91F /* StatusIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B75F4408181FA6C8006DE91F /* StatusIcon.png */; };
+		B760BF921820813800EABBCD /* jsmin-test.js in Resources */ = {isa = PBXBuildFile; fileRef = B760BF911820812800EABBCD /* jsmin-test.js */; };
 		B7FD21D7182035100063EA2D /* jsmin.c in Sources */ = {isa = PBXBuildFile; fileRef = B7FD21D6182035100063EA2D /* jsmin.c */; };
 		B7FD21DB182036990063EA2D /* jsmin in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7FD21CB182034D10063EA2D /* jsmin */; };
 		B7FD9F74181FA06900D85B0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F73181FA06900D85B0A /* Cocoa.framework */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		B75F4405181FA2A2006DE91F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B75F4408181FA6C8006DE91F /* StatusIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusIcon.png; sourceTree = "<group>"; };
+		B760BF911820812800EABBCD /* jsmin-test.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jsmin-test.js"; sourceTree = "<group>"; };
 		B7FD21CB182034D10063EA2D /* jsmin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsmin; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FD21D6182035100063EA2D /* jsmin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsmin.c; path = Helpers/jsmin/jsmin.c; sourceTree = SOURCE_ROOT; };
 		B7FD9F70181FA06900D85B0A /* Squash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 				B7FD9F82181FA06900D85B0A /* Credits.rtf */,
 				B7FD9F8B181FA06900D85B0A /* Images.xcassets */,
 				B75F4408181FA6C8006DE91F /* StatusIcon.png */,
+				B760BF911820812800EABBCD /* jsmin-test.js */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -330,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B760BF921820813800EABBCD /* jsmin-test.js in Resources */,
 				B75F4409181FA6C8006DE91F /* StatusIcon.png in Resources */,
 				B7FD9F7E181FA06900D85B0A /* InfoPlist.strings in Resources */,
 				B7FD9F8C181FA06900D85B0A /* Images.xcassets in Resources */,
@@ -590,6 +594,7 @@
 				B7FD21D2182034D10063EA2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7FD9F6B181FA06900D85B0A /* Build configuration list for PBXProject "Squash" */ = {
 			isa = XCConfigurationList;
