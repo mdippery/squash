@@ -11,6 +11,8 @@
 		B75F4409181FA6C8006DE91F /* StatusIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B75F4408181FA6C8006DE91F /* StatusIcon.png */; };
 		B75F440C181FAB7A006DE91F /* SQStatusMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75F440B181FAB7A006DE91F /* SQStatusMenuItemView.m */; };
 		B760BF921820813800EABBCD /* jsmin-test.js in Resources */ = {isa = PBXBuildFile; fileRef = B760BF911820812800EABBCD /* jsmin-test.js */; };
+		B78D808B18210A9D009BB437 /* NSFileManager+Squash.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */; };
+		B78D808E18210BAF009BB437 /* NSFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808D18210BAF009BB437 /* NSFileManagerTests.m */; };
 		B7FD21D7182035100063EA2D /* jsmin.c in Sources */ = {isa = PBXBuildFile; fileRef = B7FD21D6182035100063EA2D /* jsmin.c */; };
 		B7FD21DB182036990063EA2D /* jsmin in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7FD21CB182034D10063EA2D /* jsmin */; };
 		B7FD9F74181FA06900D85B0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F73181FA06900D85B0A /* Cocoa.framework */; };
@@ -22,7 +24,6 @@
 		B7FD9F93181FA06900D85B0A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F92181FA06900D85B0A /* XCTest.framework */; };
 		B7FD9F94181FA06900D85B0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F73181FA06900D85B0A /* Cocoa.framework */; };
 		B7FD9F9C181FA06900D85B0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7FD9F9A181FA06900D85B0A /* InfoPlist.strings */; };
-		B7FD9F9E181FA06900D85B0A /* SquashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FD9F9D181FA06900D85B0A /* SquashTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,9 @@
 		B75F440A181FAB7A006DE91F /* SQStatusMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQStatusMenuItemView.h; sourceTree = "<group>"; };
 		B75F440B181FAB7A006DE91F /* SQStatusMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQStatusMenuItemView.m; sourceTree = "<group>"; };
 		B760BF911820812800EABBCD /* jsmin-test.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jsmin-test.js"; sourceTree = "<group>"; };
+		B78D808918210A9D009BB437 /* NSFileManager+Squash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Squash.h"; sourceTree = "<group>"; };
+		B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Squash.m"; sourceTree = "<group>"; };
+		B78D808D18210BAF009BB437 /* NSFileManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerTests.m; sourceTree = "<group>"; };
 		B7FD21CB182034D10063EA2D /* jsmin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsmin; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FD21D6182035100063EA2D /* jsmin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsmin.c; path = Helpers/jsmin/jsmin.c; sourceTree = SOURCE_ROOT; };
 		B7FD9F70181FA06900D85B0A /* Squash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +93,6 @@
 		B7FD9F92181FA06900D85B0A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B7FD9F99181FA06900D85B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7FD9F9B181FA06900D85B0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B7FD9F9D181FA06900D85B0A /* SquashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquashTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,15 @@
 				B75F440B181FAB7A006DE91F /* SQStatusMenuItemView.m */,
 			);
 			name = Interface;
+			sourceTree = "<group>";
+		};
+		B78D808718210A63009BB437 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				B78D808918210A9D009BB437 /* NSFileManager+Squash.h */,
+				B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */,
+			);
+			name = Additions;
 			sourceTree = "<group>";
 		};
 		B7FD21D4182034F70063EA2D /* Helpers */ = {
@@ -207,6 +219,7 @@
 				B7FD9F85181FA06900D85B0A /* SQApplication.h */,
 				B7FD9F86181FA06900D85B0A /* SQApplication.m */,
 				B75F4401181FA284006DE91F /* Interface */,
+				B78D808718210A63009BB437 /* Additions */,
 				B75F4400181FA172006DE91F /* Resources */,
 				B7FD9F7A181FA06900D85B0A /* Other Sources */,
 			);
@@ -226,7 +239,7 @@
 		B7FD9F97181FA06900D85B0A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B7FD9F9D181FA06900D85B0A /* SquashTests.m */,
+				B78D808D18210BAF009BB437 /* NSFileManagerTests.m */,
 				B7FD9F98181FA06900D85B0A /* Supporting Files */,
 			);
 			path = Tests;
@@ -371,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B75F440C181FAB7A006DE91F /* SQStatusMenuItemView.m in Sources */,
+				B78D808B18210A9D009BB437 /* NSFileManager+Squash.m in Sources */,
 				B7FD9F87181FA06900D85B0A /* SQApplication.m in Sources */,
 				B7FD9F80181FA06900D85B0A /* main.m in Sources */,
 			);
@@ -380,7 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7FD9F9E181FA06900D85B0A /* SquashTests.m in Sources */,
+				B78D808E18210BAF009BB437 /* NSFileManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

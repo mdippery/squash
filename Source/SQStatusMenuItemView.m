@@ -7,6 +7,7 @@
 //
 
 #import "SQStatusMenuItemView.h"
+#import "NSFileManager+Squash.h"
 #import "SQApplication.h"
 
 
@@ -83,9 +84,7 @@
     NSFileManager *fm = [NSFileManager defaultManager];
     NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
     for (NSString *path in files) {
-        BOOL isDir = NO;
-        BOOL exists = [fm fileExistsAtPath:path isDirectory:&isDir];
-        if (!exists || !isDir) {
+        if (![fm directoryExistsAtPath:path]) {
             NSLog(@"%@ does not exist or is not a directory", path);
             return NO;
         }
