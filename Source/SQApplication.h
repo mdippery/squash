@@ -13,11 +13,13 @@
 {
 @private
     NSStatusItem *_statusItem;
+    BOOL _isVisible;
 }
 
-@property (assign) IBOutlet NSMenu *statusMenu;
+@property (assign) IBOutlet NSPopover *contentPopover;
 @property (readonly) NSImage *statusMenuImage;
 
+- (IBAction)togglePopover:(id)sender;
 - (IBAction)minifyJavaScript:(id)sender;
 
 @end

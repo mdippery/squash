@@ -17,6 +17,7 @@
     NSRect frame = NSMakeRect(0.0, 0.0, [statusItem length], [[NSStatusBar systemStatusBar] thickness]);
     if ((self = [super initWithFrame:frame])) {
         _statusItem = [statusItem retain];
+        _isHighlighted = NO;
     }
     return self;
 }
@@ -31,7 +32,7 @@
 {
     [super drawRect:rect];
 
-    [_statusItem drawStatusBarBackgroundInRect:rect withHighlight:self.isHighlighted];
+    [_statusItem drawStatusBarBackgroundInRect:rect withHighlight:_isHighlighted];
 
     NSImage *icon = [(SQApplication *) [NSApp delegate] statusMenuImage];
     NSSize iconSize = [icon size];
@@ -41,16 +42,17 @@
     [icon drawAtPoint:o fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
 }
 
-- (void)mouseDown:(NSEvent *)event
+- (void)toggleHighlight
 {
-    self.highlighted = !self.isHighlighted;
+    _isHighlighted = !_isHighlighted;
     [self setNeedsDisplay:YES];
-    NSLog(@"Menu is: %@", self.isHighlighted ? @"OPEN" : @"CLOSED");
 }
 
-- (void)mouseUp:(NSEvent *)event
+#pragma mark UI Responder
+
+- (void)mouseDown:(NSEvent *)event
 {
-    NSLog(@"Menu is: %@", self.isHighlighted ? @"OPEN" : @"CLOSED");
+    [NSApp sendAction:@selector(togglePopover:) to:[NSApp delegate] from:self];
 }
 
 @end

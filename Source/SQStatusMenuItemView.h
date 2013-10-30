@@ -13,10 +13,10 @@
 {
 @private
     NSStatusItem *_statusItem;
+    BOOL _isHighlighted;
 }
 
-@property (nonatomic, assign, getter=isHighlighted) BOOL highlighted;
-
 - (id)initWithStatusItem:(NSStatusItem *)statusItem;
+- (void)toggleHighlight;
 
 @end

@@ -21,6 +21,7 @@
 
 - (void)awakeFromNib
 {
+    _isVisible = NO;
     [self activateStatusMenu];
 }
 
@@ -36,7 +37,6 @@
     _statusItem = [[bar statusItemWithLength:NSSquareStatusItemLength] retain];
     NSView *view = [[[SQStatusMenuItemView alloc] initWithStatusItem:_statusItem] autorelease];
     [_statusItem setView:view];
-    [_statusItem setMenu:[self statusMenu]];
 }
 
 - (NSImage *)statusMenuImage
@@ -59,6 +59,18 @@
 }
 
 #pragma mark UI Actions
+
+- (IBAction)togglePopover:(id)sender
+{
+    SQStatusMenuItemView *view = (SQStatusMenuItemView *) [_statusItem view];
+    _isVisible = !_isVisible;
+    [view toggleHighlight];
+    if (_isVisible) {
+        [[self contentPopover] showRelativeToRect:[view bounds] ofView:view preferredEdge:NSMaxYEdge];
+    } else {
+        [[self contentPopover] close];
+    }
+}
 
 - (IBAction)minifyJavaScript:(id)sender
 {

@@ -14,38 +14,68 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="lVt-pz-H9L" userLabel="Application" customClass="SQApplication">
             <connections>
-                <outlet property="statusMenu" destination="cDK-zy-e0t" id="OAt-Y0-DmO"/>
+                <outlet property="contentPopover" destination="dl1-6z-Y0i" id="nyC-Ht-12P"/>
             </connections>
         </customObject>
-        <menu id="cDK-zy-e0t" userLabel="Status Menu">
-            <items>
-                <menuItem title="About Squash" id="58">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+        <viewController id="3sw-0y-Edg" userLabel="Popover View Controller">
+            <connections>
+                <outlet property="view" destination="3OC-V3-8jD" id="dnv-YN-RJb"/>
+            </connections>
+        </viewController>
+        <popover id="dl1-6z-Y0i">
+            <connections>
+                <outlet property="contentViewController" destination="3sw-0y-Edg" id="r2h-1r-aLn"/>
+            </connections>
+        </popover>
+        <customView id="3OC-V3-8jD">
+            <rect key="frame" x="0.0" y="0.0" width="156" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92l-gW-bq5">
+                    <rect key="frame" x="14" y="113" width="128" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="About Squash" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eZ7-4P-k61">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
                     <connections>
-                        <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                        <action selector="orderFrontStandardAboutPanel:" target="-2" id="NIg-eI-kER"/>
                     </connections>
-                </menuItem>
-                <menuItem title="Squash Help" id="111">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EvI-wr-F2S">
+                    <rect key="frame" x="14" y="80" width="128" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Squash Help" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uia-Ak-82V">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
                     <connections>
-                        <action selector="showHelp:" target="-1" id="360"/>
+                        <action selector="showHelp:" target="-1" id="XLs-z3-e5f"/>
                     </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="149"/>
-                <menuItem title="Minify" id="q2V-75-qad">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Do-ln-J0v">
+                    <rect key="frame" x="14" y="47" width="128" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Minify" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xXk-Ut-tix">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
                     <connections>
-                        <action selector="minifyJavaScript:" target="lVt-pz-H9L" id="2Dr-fk-ybj"/>
+                        <action selector="minifyJavaScript:" target="lVt-pz-H9L" id="atW-oj-d63"/>
                     </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="zI5-rU-Ua3"/>
-                <menuItem title="Quit Squash" id="136">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t84-TM-Nch">
+                    <rect key="frame" x="14" y="14" width="128" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Quit Squash" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="44J-m4-PxL">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
                     <connections>
-                        <action selector="terminate:" target="-1" id="369"/>
+                        <action selector="terminate:" target="-1" id="Emj-lU-dfy"/>
                     </connections>
-                </menuItem>
-            </items>
-        </menu>
+                </button>
+            </subviews>
+        </customView>
     </objects>
 </document>
