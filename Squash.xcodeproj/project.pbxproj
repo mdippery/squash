@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		B75F4404181FA2A2006DE91F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75F4406181FA2A2006DE91F /* MainMenu.xib */; };
 		B75F4409181FA6C8006DE91F /* StatusIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B75F4408181FA6C8006DE91F /* StatusIcon.png */; };
+		B75F440C181FAB7A006DE91F /* SQStatusMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75F440B181FAB7A006DE91F /* SQStatusMenuItemView.m */; };
 		B760BF921820813800EABBCD /* jsmin-test.js in Resources */ = {isa = PBXBuildFile; fileRef = B760BF911820812800EABBCD /* jsmin-test.js */; };
 		B7FD21D7182035100063EA2D /* jsmin.c in Sources */ = {isa = PBXBuildFile; fileRef = B7FD21D6182035100063EA2D /* jsmin.c */; };
 		B7FD21DB182036990063EA2D /* jsmin in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7FD21CB182034D10063EA2D /* jsmin */; };
-		B75F440C181FAB7A006DE91F /* SQStatusMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75F440B181FAB7A006DE91F /* SQStatusMenuItemView.m */; };
 		B7FD9F74181FA06900D85B0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F73181FA06900D85B0A /* Cocoa.framework */; };
 		B7FD9F7E181FA06900D85B0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7FD9F7C181FA06900D85B0A /* InfoPlist.strings */; };
 		B7FD9F80181FA06900D85B0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FD9F7F181FA06900D85B0A /* main.m */; };
@@ -67,11 +67,11 @@
 /* Begin PBXFileReference section */
 		B75F4405181FA2A2006DE91F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B75F4408181FA6C8006DE91F /* StatusIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusIcon.png; sourceTree = "<group>"; };
+		B75F440A181FAB7A006DE91F /* SQStatusMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQStatusMenuItemView.h; sourceTree = "<group>"; };
+		B75F440B181FAB7A006DE91F /* SQStatusMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQStatusMenuItemView.m; sourceTree = "<group>"; };
 		B760BF911820812800EABBCD /* jsmin-test.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jsmin-test.js"; sourceTree = "<group>"; };
 		B7FD21CB182034D10063EA2D /* jsmin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsmin; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FD21D6182035100063EA2D /* jsmin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsmin.c; path = Helpers/jsmin/jsmin.c; sourceTree = SOURCE_ROOT; };
-		B75F440A181FAB7A006DE91F /* SQStatusMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQStatusMenuItemView.h; sourceTree = "<group>"; };
-		B75F440B181FAB7A006DE91F /* SQStatusMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQStatusMenuItemView.m; sourceTree = "<group>"; };
 		B7FD9F70181FA06900D85B0A /* Squash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FD9F73181FA06900D85B0A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B7FD9F76181FA06900D85B0A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -123,12 +123,12 @@
 		B75F4400181FA172006DE91F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B7FD9F7B181FA06900D85B0A /* Info.plist */,
-				B7FD9F7C181FA06900D85B0A /* InfoPlist.strings */,
 				B7FD9F82181FA06900D85B0A /* Credits.rtf */,
 				B7FD9F8B181FA06900D85B0A /* Images.xcassets */,
-				B75F4408181FA6C8006DE91F /* StatusIcon.png */,
+				B7FD9F7B181FA06900D85B0A /* Info.plist */,
+				B7FD9F7C181FA06900D85B0A /* InfoPlist.strings */,
 				B760BF911820812800EABBCD /* jsmin-test.js */,
+				B75F4408181FA6C8006DE91F /* StatusIcon.png */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
