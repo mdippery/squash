@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface SQSquash : NSObject <NSApplicationDelegate>
+@interface SQSquash : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 {
 @private
     NSStatusItem *_statusItem;

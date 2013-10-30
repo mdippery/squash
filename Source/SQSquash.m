@@ -47,6 +47,14 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+}
+
+#pragma mark NSUserNotificationCenter Delegate
+
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification
+{
+    return YES;
 }
 
 #pragma mark UI Actions
@@ -55,8 +63,6 @@
 {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
-        NSLog(@"Minifying JavaScript");
-
         NSBundle *bundle = [NSBundle mainBundle];
         NSString *jsminPath = [bundle pathForAuxiliaryExecutable:@"jsmin"];
         NSString *jsData = [bundle pathForResource:@"jsmin-test" ofType:@"js"];
@@ -82,8 +88,13 @@
         NSData *data = [readHandle readDataToEndOfFile];
 
         NSString *miniJS = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"JavaScript minified!\n%@", miniJS);
 
+        NSUserNotification *note = [[NSUserNotification alloc] init];
+        note.title = @"JavaScript Minified";
+        note.informativeText = @"JavaScript file has been minified.";
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:note];
+
+        [note release];
         [miniJS release];
         [task release];
     });
