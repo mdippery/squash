@@ -7,6 +7,7 @@
 //
 
 #import "SQSquash.h"
+#import <dispatch/dispatch.h>
 
 
 @interface SQSquash ()
@@ -52,34 +53,40 @@
 
 - (IBAction)minifyJavaScript:(id)sender
 {
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSString *jsminPath = [bundle pathForAuxiliaryExecutable:@"jsmin"];
-    NSString *jsData = [bundle pathForResource:@"jsmin-test" ofType:@"js"];
-    jsData = [NSString stringWithContentsOfFile:jsData encoding:NSUTF8StringEncoding error:NULL];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        NSLog(@"Minifying JavaScript");
 
-    NSTask *task = [[NSTask alloc] init];
-    [task setLaunchPath:jsminPath];
+        NSBundle *bundle = [NSBundle mainBundle];
+        NSString *jsminPath = [bundle pathForAuxiliaryExecutable:@"jsmin"];
+        NSString *jsData = [bundle pathForResource:@"jsmin-test" ofType:@"js"];
+        jsData = [NSString stringWithContentsOfFile:jsData encoding:NSUTF8StringEncoding error:NULL];
 
-    NSPipe *writePipe = [NSPipe pipe];
-    NSFileHandle *writeHandle = [writePipe fileHandleForWriting];
+        NSTask *task = [[NSTask alloc] init];
+        [task setLaunchPath:jsminPath];
 
-    NSPipe *readPipe = [NSPipe pipe];
-    NSFileHandle *readHandle = [readPipe fileHandleForReading];
+        NSPipe *writePipe = [NSPipe pipe];
+        NSFileHandle *writeHandle = [writePipe fileHandleForWriting];
 
-    [task setStandardInput:writePipe];
-    [task setStandardOutput:readPipe];
+        NSPipe *readPipe = [NSPipe pipe];
+        NSFileHandle *readHandle = [readPipe fileHandleForReading];
 
-    [task launch];
+        [task setStandardInput:writePipe];
+        [task setStandardOutput:readPipe];
 
-    [writeHandle writeData:[jsData dataUsingEncoding:NSUTF8StringEncoding]];
-    [writeHandle closeFile];
+        [task launch];
 
-    NSData *data = [readHandle readDataToEndOfFile];
+        [writeHandle writeData:[jsData dataUsingEncoding:NSUTF8StringEncoding]];
+        [writeHandle closeFile];
 
-    NSString *miniJS = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSData *data = [readHandle readDataToEndOfFile];
 
-    [miniJS release];
-    [task release];
+        NSString *miniJS = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"JavaScript minified!\n%@", miniJS);
+
+        [miniJS release];
+        [task release];
+    });
 }
 
 @end
