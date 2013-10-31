@@ -14,6 +14,7 @@
 		B78D808B18210A9D009BB437 /* NSFileManager+Squash.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */; };
 		B78D808E18210BAF009BB437 /* NSFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808D18210BAF009BB437 /* NSFileManagerTests.m */; };
 		B7B42151182213B800AF86E9 /* gems in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7B4214F1822139300AF86E9 /* gems */; };
+		B7B421531822178C00AF86E9 /* scss-test.scss in Resources */ = {isa = PBXBuildFile; fileRef = B7B421521822178C00AF86E9 /* scss-test.scss */; };
 		B7FD21D7182035100063EA2D /* jsmin.c in Sources */ = {isa = PBXBuildFile; fileRef = B7FD21D6182035100063EA2D /* jsmin.c */; };
 		B7FD21DB182036990063EA2D /* jsmin in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7FD21CB182034D10063EA2D /* jsmin */; };
 		B7FD9F74181FA06900D85B0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F73181FA06900D85B0A /* Cocoa.framework */; };
@@ -86,6 +87,7 @@
 		B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Squash.m"; sourceTree = "<group>"; };
 		B78D808D18210BAF009BB437 /* NSFileManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerTests.m; sourceTree = "<group>"; };
 		B7B4214F1822139300AF86E9 /* gems */ = {isa = PBXFileReference; lastKnownFileType = folder; name = gems; path = Helpers/gems; sourceTree = SOURCE_ROOT; };
+		B7B421521822178C00AF86E9 /* scss-test.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "scss-test.scss"; sourceTree = "<group>"; };
 		B7FD21CB182034D10063EA2D /* jsmin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsmin; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FD21D6182035100063EA2D /* jsmin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsmin.c; path = Helpers/jsmin/jsmin.c; sourceTree = SOURCE_ROOT; };
 		B7FD9F70181FA06900D85B0A /* Squash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,8 +144,8 @@
 				B7FD9F8B181FA06900D85B0A /* Images.xcassets */,
 				B7FD9F7B181FA06900D85B0A /* Info.plist */,
 				B7FD9F7C181FA06900D85B0A /* InfoPlist.strings */,
-				B760BF911820812800EABBCD /* jsmin-test.js */,
 				B75F4408181FA6C8006DE91F /* StatusIcon.png */,
+				B7B42154182217A600AF86E9 /* Test Files */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -165,6 +167,15 @@
 				B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */,
 			);
 			name = Additions;
+			sourceTree = "<group>";
+		};
+		B7B42154182217A600AF86E9 /* Test Files */ = {
+			isa = PBXGroup;
+			children = (
+				B760BF911820812800EABBCD /* jsmin-test.js */,
+				B7B421521822178C00AF86E9 /* scss-test.scss */,
+			);
+			name = "Test Files";
 			sourceTree = "<group>";
 		};
 		B7FD21D4182034F70063EA2D /* Helpers */ = {
@@ -367,6 +378,7 @@
 			files = (
 				B760BF921820813800EABBCD /* jsmin-test.js in Resources */,
 				B75F4409181FA6C8006DE91F /* StatusIcon.png in Resources */,
+				B7B421531822178C00AF86E9 /* scss-test.scss in Resources */,
 				B7FD9F7E181FA06900D85B0A /* InfoPlist.strings in Resources */,
 				B7FD9F8C181FA06900D85B0A /* Images.xcassets in Resources */,
 				B7FD9F84181FA06900D85B0A /* Credits.rtf in Resources */,

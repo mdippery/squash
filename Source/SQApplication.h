@@ -21,5 +21,6 @@
 
 - (IBAction)togglePopover:(id)sender;
 - (IBAction)minifyJavaScript:(id)sender;
+- (IBAction)processSass:(id)sender;
 
 @end

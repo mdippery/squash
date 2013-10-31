@@ -113,4 +113,35 @@
     });
 }
 
+- (IBAction)processSass:(id)sender
+{
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        NSBundle *bundle = [NSBundle mainBundle];
+
+        NSTask *task = [[NSTask alloc] init];
+        [task setLaunchPath:@"/usr/bin/ruby"];
+
+        NSString *gemDir = [bundle pathForResource:@"gems" ofType:@""];
+        NSDictionary *env = [NSDictionary dictionaryWithObject:gemDir forKey:@"GEM_HOME"];
+        [task setEnvironment:env];
+
+        NSString *sassBin = [[gemDir stringByAppendingPathComponent:@"bin"] stringByAppendingPathComponent:@"sass"];
+        NSString *scssPath = [bundle pathForResource:@"scss-test" ofType:@"scss"];
+        NSString *cssPath = @"/tmp/scss-test.css";
+        NSArray *args = [NSArray arrayWithObjects:sassBin, scssPath, cssPath, nil];
+        [task setArguments:args];
+
+        [task launch];
+
+        NSUserNotification *note = [[NSUserNotification alloc] init];
+        note.title = @"SASS Processed";
+        note.informativeText = @"SASS file has been processed.";
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:note];
+
+        [note release];
+        [task release];
+    });
+}
+
 @end
