@@ -7,9 +7,9 @@
 //
 
 #import "SQApplication.h"
+#import "SQStatusMenuItemView.h"
 
 #import <dispatch/dispatch.h>
-#import "SQStatusMenuItemView.h"
 
 
 @interface SQApplication ()
