@@ -34,5 +34,14 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SQBundledPackageVersions</key>
+	<array>
+		<dict>
+			<key>Package</key>
+			<string>node</string>
+			<key>Version</key>
+			<string>0.10.21</string>
+		</dict>
+	</array>
 </dict>
 </plist>
