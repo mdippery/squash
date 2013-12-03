@@ -11,6 +11,7 @@
 		B75F4409181FA6C8006DE91F /* StatusIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B75F4408181FA6C8006DE91F /* StatusIcon.png */; };
 		B75F440C181FAB7A006DE91F /* SQStatusMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75F440B181FAB7A006DE91F /* SQStatusMenuItemView.m */; };
 		B760BF921820813800EABBCD /* jsmin-test.js in Resources */ = {isa = PBXBuildFile; fileRef = B760BF911820812800EABBCD /* jsmin-test.js */; };
+		B76659AC184DCA7300649783 /* SQGemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B76659AB184DCA7300649783 /* SQGemManager.m */; };
 		B78D808B18210A9D009BB437 /* NSFileManager+Squash.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */; };
 		B78D808E18210BAF009BB437 /* NSFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808D18210BAF009BB437 /* NSFileManagerTests.m */; };
 		B7B421531822178C00AF86E9 /* scss-test.scss in Resources */ = {isa = PBXBuildFile; fileRef = B7B421521822178C00AF86E9 /* scss-test.scss */; };
@@ -81,6 +82,8 @@
 		B75F440A181FAB7A006DE91F /* SQStatusMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQStatusMenuItemView.h; sourceTree = "<group>"; };
 		B75F440B181FAB7A006DE91F /* SQStatusMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQStatusMenuItemView.m; sourceTree = "<group>"; };
 		B760BF911820812800EABBCD /* jsmin-test.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jsmin-test.js"; sourceTree = "<group>"; };
+		B76659AA184DCA7300649783 /* SQGemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGemManager.h; sourceTree = "<group>"; };
+		B76659AB184DCA7300649783 /* SQGemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQGemManager.m; sourceTree = "<group>"; };
 		B78D808918210A9D009BB437 /* NSFileManager+Squash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Squash.h"; sourceTree = "<group>"; };
 		B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Squash.m"; sourceTree = "<group>"; };
 		B78D808D18210BAF009BB437 /* NSFileManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerTests.m; sourceTree = "<group>"; };
@@ -155,6 +158,15 @@
 				B75F440B181FAB7A006DE91F /* SQStatusMenuItemView.m */,
 			);
 			name = Interface;
+			sourceTree = "<group>";
+		};
+		B76659A9184DCA5700649783 /* Support Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B76659AA184DCA7300649783 /* SQGemManager.h */,
+				B76659AB184DCA7300649783 /* SQGemManager.m */,
+			);
+			name = "Support Classes";
 			sourceTree = "<group>";
 		};
 		B78D808718210A63009BB437 /* Additions */ = {
@@ -239,6 +251,7 @@
 				B7FD9F85181FA06900D85B0A /* SQApplication.h */,
 				B7FD9F86181FA06900D85B0A /* SQApplication.m */,
 				B75F4401181FA284006DE91F /* Interface */,
+				B76659A9184DCA5700649783 /* Support Classes */,
 				B78D808718210A63009BB437 /* Additions */,
 				B75F4400181FA172006DE91F /* Resources */,
 				B7FD9F7A181FA06900D85B0A /* Other Sources */,
@@ -408,6 +421,7 @@
 				B75F440C181FAB7A006DE91F /* SQStatusMenuItemView.m in Sources */,
 				B78D808B18210A9D009BB437 /* NSFileManager+Squash.m in Sources */,
 				B7FD9F87181FA06900D85B0A /* SQApplication.m in Sources */,
+				B76659AC184DCA7300649783 /* SQGemManager.m in Sources */,
 				B7FD9F80181FA06900D85B0A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
