@@ -18,11 +18,14 @@
 #import "SQApplication.h"
 #import "SQStatusMenuItemView.h"
 
+#import "NSFileManager+Squash.h"
+
 #import <dispatch/dispatch.h>
 
 
 @interface SQApplication ()
 - (void)activateStatusMenu;
+- (void)installSass;
 @end
 
 
@@ -122,10 +125,52 @@
     });
 }
 
+- (void)installSass
+{
+    NSFileManager *fm = [NSFileManager defaultManager];
+
+    NSString *gemDir = [[[NSFileManager defaultManager] applicationSupportDirectory] stringByAppendingPathComponent:@"gems"];
+    NSString *sassBin = [[gemDir stringByAppendingPathComponent:@"bin"] stringByAppendingPathComponent:@"sass"];
+
+    if ([fm fileExistsAtPath:sassBin]) {
+        NSLog(@"Sass is already installed at %@", gemDir);
+        return;
+    }
+
+    NSLog(@"%@ does not exist, installing", sassBin);
+
+    NSError *error;
+    if (![fm directoryExistsAtPath:gemDir]) {
+        BOOL success = [fm createDirectoryAtPath:gemDir withIntermediateDirectories:NO attributes:nil error:&error];
+        if (!success) {
+            NSLog(@"Could not create directory: %@\n%@", gemDir, error);
+            return;
+        }
+    }
+
+    NSTask *task = [[NSTask alloc] init];
+    [task setLaunchPath:@"/usr/bin/gem"];
+
+    NSDictionary *env = [NSDictionary dictionaryWithObject:gemDir forKey:@"GEM_HOME"];
+    [task setEnvironment:env];
+
+    NSArray *args = [NSArray arrayWithObjects:@"install", @"--version", @"3.2.12", @"sass", nil];
+    [task setArguments:args];
+
+    [task launch];
+    [task waitUntilExit];
+    // TODO: Check return value
+
+    [task release];
+    NSLog(@"Installed sass into %@", gemDir);
+}
+
 - (IBAction)processSass:(id)sender
 {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
+        [self installSass];
+#if 0
         NSBundle *bundle = [NSBundle mainBundle];
 
         NSTask *task = [[NSTask alloc] init];
@@ -150,6 +195,7 @@
 
         [note release];
         [task release];
+#endif
     });
 }
 
