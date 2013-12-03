@@ -22,4 +22,11 @@
 
 - (BOOL)directoryExistsAtPath:(NSString *)path;
 
+- (NSString *)applicationSupportDirectory;
+
+- (NSString *)findOrCreateDirectory:(NSSearchPathDirectory)searchPathDirectory
+                           inDomain:(NSSearchPathDomainMask)domainMask
+               appendPathComponents:(NSArray *)pathComponents
+                              error:(NSError **)error;
+
 @end
