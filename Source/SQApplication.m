@@ -25,6 +25,8 @@
 
 @interface SQApplication ()
 - (void)activateStatusMenu;
+- (NSString *)gemDirectory;
+- (NSString *)sassExecutable;
 - (void)installSass;
 @end
 
@@ -125,12 +127,22 @@
     });
 }
 
+- (NSString *)gemDirectory
+{
+    return [[[NSFileManager defaultManager] applicationSupportDirectory] stringByAppendingPathComponent:@"gems"];
+}
+
+- (NSString *)sassExecutable
+{
+    return [[[self gemDirectory] stringByAppendingPathComponent:@"bin"] stringByAppendingPathComponent:@"sass"];
+}
+
 - (void)installSass
 {
     NSFileManager *fm = [NSFileManager defaultManager];
 
-    NSString *gemDir = [[[NSFileManager defaultManager] applicationSupportDirectory] stringByAppendingPathComponent:@"gems"];
-    NSString *sassBin = [[gemDir stringByAppendingPathComponent:@"bin"] stringByAppendingPathComponent:@"sass"];
+    NSString *gemDir = [self gemDirectory];
+    NSString *sassBin = [self sassExecutable];
 
     if ([fm fileExistsAtPath:sassBin]) {
         NSLog(@"Sass is already installed at %@", gemDir);
@@ -170,20 +182,19 @@
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         [self installSass];
-#if 0
+
         NSBundle *bundle = [NSBundle mainBundle];
 
         NSTask *task = [[NSTask alloc] init];
-        [task setLaunchPath:@"/usr/bin/ruby"];
+        [task setLaunchPath:[self sassExecutable]];
 
-        NSString *gemDir = [bundle pathForResource:@"gems" ofType:@""];
+        NSString *gemDir = [self gemDirectory];
         NSDictionary *env = [NSDictionary dictionaryWithObject:gemDir forKey:@"GEM_HOME"];
         [task setEnvironment:env];
 
-        NSString *sassBin = [[gemDir stringByAppendingPathComponent:@"bin"] stringByAppendingPathComponent:@"sass"];
         NSString *scssPath = [bundle pathForResource:@"scss-test" ofType:@"scss"];
         NSString *cssPath = @"/tmp/scss-test.css";
-        NSArray *args = [NSArray arrayWithObjects:sassBin, scssPath, cssPath, nil];
+        NSArray *args = [NSArray arrayWithObjects:scssPath, cssPath, nil];
         [task setArguments:args];
 
         [task launch];
@@ -195,7 +206,6 @@
 
         [note release];
         [task release];
-#endif
     });
 }
 
