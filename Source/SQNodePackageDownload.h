@@ -23,6 +23,7 @@
 @private
     NSString *_name;
     NSString *_destination;
+    NSString *_downloadFilename;
     NSURL *_downloadURL;
 }
 

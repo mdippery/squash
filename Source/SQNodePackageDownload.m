@@ -36,6 +36,7 @@
     if ((self = [super init])) {
         _name = [name copy];
         _destination = [destination copy];
+        _downloadFilename = nil;
         _downloadURL = [downloadURL retain];
     }
     return self;
@@ -45,6 +46,7 @@
 {
     [_name release];
     [_destination release];
+    [_downloadFilename release];
     [_downloadURL release];
     [super dealloc];
 }
@@ -114,9 +116,8 @@
 {
     NSString *ext = [filename pathExtension];
     NSString *base = [_name stringByAppendingPathExtension:ext];
-    NSString *dest = [_destination stringByAppendingPathComponent:base];
-    NSLog(@"Downloaded file path: %@", dest);
-    [download setDestination:dest allowOverwrite:YES];
+    _downloadFilename = [[_destination stringByAppendingPathComponent:base] retain];
+    [download setDestination:_downloadFilename allowOverwrite:YES];
 }
 
 @end
