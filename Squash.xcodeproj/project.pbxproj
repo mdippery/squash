@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B71D4ACA1850631D00AF2812 /* SQNodePackageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B71D4AC91850631D00AF2812 /* SQNodePackageManager.m */; };
+		B71D4ACD185074AF00AF2812 /* SQNodePackageDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = B71D4ACC185074AF00AF2812 /* SQNodePackageDownload.m */; };
 		B75F4404181FA2A2006DE91F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75F4406181FA2A2006DE91F /* MainMenu.xib */; };
 		B75F4409181FA6C8006DE91F /* StatusIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B75F4408181FA6C8006DE91F /* StatusIcon.png */; };
 		B75F440C181FAB7A006DE91F /* SQStatusMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75F440B181FAB7A006DE91F /* SQStatusMenuItemView.m */; };
@@ -79,6 +81,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B71D4AC81850631D00AF2812 /* SQNodePackageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNodePackageManager.h; sourceTree = "<group>"; };
+		B71D4AC91850631D00AF2812 /* SQNodePackageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNodePackageManager.m; sourceTree = "<group>"; };
+		B71D4ACB185074AF00AF2812 /* SQNodePackageDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNodePackageDownload.h; sourceTree = "<group>"; };
+		B71D4ACC185074AF00AF2812 /* SQNodePackageDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNodePackageDownload.m; sourceTree = "<group>"; };
 		B75F4405181FA2A2006DE91F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B75F4408181FA6C8006DE91F /* StatusIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusIcon.png; sourceTree = "<group>"; };
 		B75F440A181FAB7A006DE91F /* SQStatusMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQStatusMenuItemView.h; sourceTree = "<group>"; };
@@ -140,6 +146,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B71D4ACE1850784A00AF2812 /* Ruby Gems */ = {
+			isa = PBXGroup;
+			children = (
+				B76659AA184DCA7300649783 /* SQGemManager.h */,
+				B76659AB184DCA7300649783 /* SQGemManager.m */,
+			);
+			name = "Ruby Gems";
+			sourceTree = "<group>";
+		};
+		B71D4ACF1850785C00AF2812 /* node.js */ = {
+			isa = PBXGroup;
+			children = (
+				B71D4ACB185074AF00AF2812 /* SQNodePackageDownload.h */,
+				B71D4ACC185074AF00AF2812 /* SQNodePackageDownload.m */,
+				B71D4AC81850631D00AF2812 /* SQNodePackageManager.h */,
+				B71D4AC91850631D00AF2812 /* SQNodePackageManager.m */,
+			);
+			name = node.js;
+			sourceTree = "<group>";
+		};
 		B75F4400181FA172006DE91F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,13 +189,13 @@
 			name = Interface;
 			sourceTree = "<group>";
 		};
-		B76659A9184DCA5700649783 /* Support Classes */ = {
+		B76659A9184DCA5700649783 /* Package Management */ = {
 			isa = PBXGroup;
 			children = (
-				B76659AA184DCA7300649783 /* SQGemManager.h */,
-				B76659AB184DCA7300649783 /* SQGemManager.m */,
+				B71D4ACF1850785C00AF2812 /* node.js */,
+				B71D4ACE1850784A00AF2812 /* Ruby Gems */,
 			);
-			name = "Support Classes";
+			name = "Package Management";
 			sourceTree = "<group>";
 		};
 		B7716D4F18222E4E001308E3 /* node */ = {
@@ -263,7 +289,7 @@
 				B7FD9F85181FA06900D85B0A /* SQApplication.h */,
 				B7FD9F86181FA06900D85B0A /* SQApplication.m */,
 				B75F4401181FA284006DE91F /* Interface */,
-				B76659A9184DCA5700649783 /* Support Classes */,
+				B76659A9184DCA5700649783 /* Package Management */,
 				B78D808718210A63009BB437 /* Additions */,
 				B75F4400181FA172006DE91F /* Resources */,
 				B7FD9F7A181FA06900D85B0A /* Other Sources */,
@@ -432,7 +458,9 @@
 			files = (
 				B75F440C181FAB7A006DE91F /* SQStatusMenuItemView.m in Sources */,
 				B78D808B18210A9D009BB437 /* NSFileManager+Squash.m in Sources */,
+				B71D4ACA1850631D00AF2812 /* SQNodePackageManager.m in Sources */,
 				B7FD9F87181FA06900D85B0A /* SQApplication.m in Sources */,
+				B71D4ACD185074AF00AF2812 /* SQNodePackageDownload.m in Sources */,
 				B76659AC184DCA7300649783 /* SQGemManager.m in Sources */,
 				B7FD9F80181FA06900D85B0A /* main.m in Sources */,
 			);

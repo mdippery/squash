@@ -15,22 +15,20 @@
  * limitations under the License.
  */
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 
-@interface SQApplication : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
+@interface SQNodePackageDownload : NSObject <NSURLDownloadDelegate>
 {
 @private
-    NSStatusItem *_statusItem;
-    BOOL _isVisible;
+    NSString *_name;
+    NSString *_destination;
+    NSURL *_downloadURL;
 }
 
-@property (assign) IBOutlet NSPopover *contentPopover;
-@property (readonly) NSImage *statusMenuImage;
++ (SQNodePackageDownload *)packageWithName:(NSString *)name destination:(NSString *)destination fromURL:(NSURL *)downloadURL;
 
-- (IBAction)togglePopover:(id)sender;
-- (IBAction)minifyJavaScript:(id)sender;
-- (IBAction)processSass:(id)sender;
-- (IBAction)processLess:(id)sender;
+- (id)initWithName:(NSString *)name destination:(NSString *)destination fromURL:(NSURL *)downloadURL;
+- (BOOL)download;
 
 @end

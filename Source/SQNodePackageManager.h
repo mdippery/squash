@@ -15,22 +15,17 @@
  * limitations under the License.
  */
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 
-@interface SQApplication : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
-{
-@private
-    NSStatusItem *_statusItem;
-    BOOL _isVisible;
-}
+@interface SQNodePackageManager : NSObject
 
-@property (assign) IBOutlet NSPopover *contentPopover;
-@property (readonly) NSImage *statusMenuImage;
++ (SQNodePackageManager *)defaultManager;
 
-- (IBAction)togglePopover:(id)sender;
-- (IBAction)minifyJavaScript:(id)sender;
-- (IBAction)processSass:(id)sender;
-- (IBAction)processLess:(id)sender;
+- (NSString *)nodePackageDirectory;
+
+- (BOOL)installNodePackage:(NSString *)name fromURL:(NSURL *)url;
+- (BOOL)launchExecutableNamed:(NSString *)name;
+- (BOOL)launchExecutableNamed:(NSString *)name withArguments:(NSArray *)args;
 
 @end

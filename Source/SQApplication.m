@@ -18,6 +18,7 @@
 #import "SQApplication.h"
 
 #import "SQGemManager.h"
+#import "SQNodePackageManager.h"
 #import "SQStatusMenuItemView.h"
 
 #import <dispatch/dispatch.h>
@@ -153,6 +154,13 @@
 
         [note release];
     });
+}
+
+- (IBAction)processLess:(id)sender
+{
+    NSURL *lessURL = [NSURL URLWithString:@"https://github.com/less/less.js/tarball/master"];
+    BOOL success = [[SQNodePackageManager defaultManager] installNodePackage:@"less" fromURL:lessURL];
+    NSLog(@"Downloaded Less: %@", success ? @"YES" : @"NO");
 }
 
 @end
