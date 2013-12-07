@@ -17,10 +17,15 @@
 
 #import "SQNodePackageDownload.h"
 
+#import <Pitch.h>
+
 
 @interface SQNodePackageDownload ()
 - (BOOL)createDestinationDirectory;
 - (BOOL)removeDestinationDirectory;
+- (void)untarPackage;
+- (void)cleanupPackage;
+- (void)replaceDestinationWithContentsOfDirectoryAtPath:(NSString *)path;
 @end
 
 
@@ -99,6 +104,69 @@
     return YES;
 }
 
+- (void)untarPackage
+{
+    NSError *error;
+    TARFile *tar = [TARFile fileWithContentsOfFile:_downloadFilename];
+    BOOL success = [tar extractToDirectory:_destination error:&error];
+    if (!success) {
+        NSLog(@"Could not untar %@ into %@: %@", _downloadFilename, _destination, error);
+    }
+    [self cleanupPackage];
+}
+
+- (void)cleanupPackage
+{
+    NSFileManager *fm = [NSFileManager defaultManager];
+
+    // Remove pax_global_header file if one exists -- it's
+    // just a global header file that we don't actually need.
+    NSString *paxPath = [_destination stringByAppendingPathComponent:@"pax_global_header"];
+    if ([fm fileExistsAtPath:paxPath isDirectory:NULL]) {
+        [fm removeItemAtPath:paxPath error:NULL];
+    }
+
+    // Move the contents of the downloaded directory to the
+    // destination directory.
+    NSArray *paths = [fm contentsOfDirectoryAtPath:_destination error:NULL];
+    for (NSString *path in paths) {
+        path = [_destination stringByAppendingPathComponent:path];
+        BOOL isDir = NO;
+        if ([fm fileExistsAtPath:path isDirectory:&isDir] && isDir) {
+            NSLog(@"Found subdirectory: %@", path);
+            [self replaceDestinationWithContentsOfDirectoryAtPath:path];
+        }
+    }
+}
+
+- (void)replaceDestinationWithContentsOfDirectoryAtPath:(NSString *)path
+{
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSString *dirname = [_destination stringByDeletingLastPathComponent];
+    dirname = [dirname stringByAppendingPathComponent:[path lastPathComponent]];
+
+    NSError *error;
+    BOOL success;
+
+    success = [fm moveItemAtPath:path toPath:dirname error:&error];
+    if (!success) {
+        NSLog(@"Could not replace package: %@", error);
+        return;
+    }
+
+    success = [fm removeItemAtPath:_destination error:&error];
+    if (!success) {
+        NSLog(@"Could not delete %@: %@", _destination, error);
+        return;
+    }
+
+    success = [fm moveItemAtPath:dirname toPath:_destination error:&error];
+    if (!success) {
+        NSLog(@"Could not move package from %@ to %@: %@", dirname, _destination, error);
+        return;
+    }
+}
+
 #pragma mark NSURLDownload Delegate
 
 - (void)download:(NSURLDownload *)download didFailWithError:(NSError *)error
@@ -109,7 +177,12 @@
 
 - (void)downloadDidFinish:(NSURLDownload *)download
 {
-    NSLog(@"Download finished");
+    // After downloading, we need to untar the package.
+    // This is a bit of a hack -- in the specific case
+    // of less (which this class is used for), the
+    // package is distributed as a tarball. THIS WON'T
+    // WORK IN THE GENERAL CASE.
+    [self untarPackage];
 }
 
 - (void)download:(NSURLDownload *)download decideDestinationWithSuggestedFilename:(NSString *)filename
