@@ -25,6 +25,7 @@
 @interface SQNodePackageManager ()
 - (BOOL)createPackageDirectory;
 - (BOOL)packageIsInstalled:(NSString *)name;
+- (NSString *)pathToExecutable:(NSString *)name forPackage:(NSString *)package;
 @end
 
 
@@ -38,6 +39,12 @@
         manager = [[super allocWithZone:nil] init];
     });
     return manager;
+}
+
+- (NSString *)nodeBinDirectory
+{
+    NSString *nodeBin = [[NSBundle mainBundle] pathForAuxiliaryExecutable:@"node"];
+    return [nodeBin stringByDeletingLastPathComponent];
 }
 
 - (NSString *)nodePackageDirectory
@@ -71,14 +78,37 @@
     return [download download];
 }
 
-- (BOOL)launchExecutableNamed:(NSString *)name
+- (NSString *)pathToExecutable:(NSString *)name forPackage:(NSString *)package
 {
-    return [self launchExecutableNamed:name withArguments:nil];
+    NSString *dir = [self nodePackageDirectory];
+    dir = [dir stringByAppendingPathComponent:package];
+    dir = [dir stringByAppendingPathComponent:@"bin"];
+    return [dir stringByAppendingPathComponent:name];
 }
 
-- (BOOL)launchExecutableNamed:(NSString *)name withArguments:(NSArray *)args
+- (BOOL)launchExecutableFromPackage:(NSString *)package named:(NSString *)name
 {
-    return NO;
+    return [self launchExecutableFromPackage:package named:name withArguments:nil];
+}
+
+- (BOOL)launchExecutableFromPackage:(NSString *)package named:(NSString *)name withArguments:(NSArray *)args
+{
+    NSString *lessc = [self pathToExecutable:name forPackage:package];
+    NSTask *task = [[NSTask alloc] init];
+    [task setLaunchPath:lessc];
+    [task setArguments:args];
+
+    NSString *binPath = [self nodeBinDirectory];
+    NSDictionary *env = [NSDictionary dictionaryWithObject:binPath forKey:@"PATH"];
+    [task setEnvironment:env];
+
+    NSLog(@"Launching Node binary at path: %@ with env: %@ and args: %@", lessc, env, args);
+    [task launch];
+    [task waitUntilExit];
+    BOOL success = [task terminationStatus] == 0;
+
+    [task release];
+    return success;
 }
 
 #pragma mark Singleton

@@ -151,16 +151,39 @@
         note.title = @"SASS Processed";
         note.informativeText = @"SASS file has been processed.";
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:note];
-
         [note release];
     });
 }
 
 - (IBAction)processLess:(id)sender
 {
-    NSURL *lessURL = [NSURL URLWithString:@"https://github.com/less/less.js/tarball/master"];
-    BOOL success = [[SQNodePackageManager defaultManager] installNodePackage:@"less" fromURL:lessURL];
-    NSLog(@"Downloaded Less: %@", success ? @"YES" : @"NO");
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        BOOL success;
+        SQNodePackageManager *manager = [SQNodePackageManager defaultManager];
+        NSURL *lessURL = [NSURL URLWithString:@"https://github.com/less/less.js/tarball/master"];
+        success = [manager installNodePackage:@"less" fromURL:lessURL];
+        if (!success) {
+            NSLog(@"Could not install Less");
+            return;
+        }
+
+        NSBundle *bundle = [NSBundle mainBundle];
+        NSString *lessPath = [bundle pathForResource:@"less-test" ofType:@"less"];
+
+        NSArray *args = [NSArray arrayWithObjects:lessPath, @"/tmp/less-test.css", nil];
+        success = [manager launchExecutableFromPackage:@"less" named:@"lessc" withArguments:args];
+        if (!success) {
+            NSLog(@"Could not launch less");
+            return;
+        }
+
+        NSUserNotification *note = [[NSUserNotification alloc] init];
+        note.title = @"LESS Processed";
+        note.informativeText = @"LESS file has been processed.";
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:note];
+        [note release];
+    });
 }
 
 @end

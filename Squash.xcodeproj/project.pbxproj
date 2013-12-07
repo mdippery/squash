@@ -17,6 +17,7 @@
 		B7716D5118222E73001308E3 /* node in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7716D5018222E64001308E3 /* node */; };
 		B77B27791852CB24006A8CC9 /* libpitch.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B77B27731852CB23006A8CC9 /* libpitch.1.dylib */; };
 		B77B277B1852CB64006A8CC9 /* libpitch.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B77B27731852CB23006A8CC9 /* libpitch.1.dylib */; };
+		B77B277D1852E415006A8CC9 /* less-test.less in Resources */ = {isa = PBXBuildFile; fileRef = B77B277C1852E415006A8CC9 /* less-test.less */; };
 		B78D808B18210A9D009BB437 /* NSFileManager+Squash.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */; };
 		B78D808E18210BAF009BB437 /* NSFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808D18210BAF009BB437 /* NSFileManagerTests.m */; };
 		B7B421531822178C00AF86E9 /* scss-test.scss in Resources */ = {isa = PBXBuildFile; fileRef = B7B421521822178C00AF86E9 /* scss-test.scss */; };
@@ -102,6 +103,7 @@
 		B77B27761852CB24006A8CC9 /* Pitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pitch.h; path = Helpers/libpitch/Pitch.h; sourceTree = "<group>"; };
 		B77B27771852CB24006A8CC9 /* TAREntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAREntry.h; path = Helpers/libpitch/TAREntry.h; sourceTree = "<group>"; };
 		B77B27781852CB24006A8CC9 /* TARFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TARFile.h; path = Helpers/libpitch/TARFile.h; sourceTree = "<group>"; };
+		B77B277C1852E415006A8CC9 /* less-test.less */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "less-test.less"; sourceTree = "<group>"; };
 		B78D808918210A9D009BB437 /* NSFileManager+Squash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Squash.h"; sourceTree = "<group>"; };
 		B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Squash.m"; sourceTree = "<group>"; };
 		B78D808D18210BAF009BB437 /* NSFileManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerTests.m; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				B760BF911820812800EABBCD /* jsmin-test.js */,
+				B77B277C1852E415006A8CC9 /* less-test.less */,
 				B7B421521822178C00AF86E9 /* scss-test.scss */,
 			);
 			name = "Test Files";
@@ -454,6 +457,7 @@
 				B7FD9F8C181FA06900D85B0A /* Images.xcassets in Resources */,
 				B7FD9F84181FA06900D85B0A /* Credits.rtf in Resources */,
 				B75F4404181FA2A2006DE91F /* MainMenu.xib in Resources */,
+				B77B277D1852E415006A8CC9 /* less-test.less in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

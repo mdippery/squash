@@ -22,10 +22,11 @@
 
 + (SQNodePackageManager *)defaultManager;
 
+- (NSString *)nodeBinDirectory;
 - (NSString *)nodePackageDirectory;
 
 - (BOOL)installNodePackage:(NSString *)name fromURL:(NSURL *)url;
-- (BOOL)launchExecutableNamed:(NSString *)name;
-- (BOOL)launchExecutableNamed:(NSString *)name withArguments:(NSArray *)args;
+- (BOOL)launchExecutableFromPackage:(NSString *)package named:(NSString *)name;
+- (BOOL)launchExecutableFromPackage:(NSString *)package named:(NSString *)name withArguments:(NSArray *)args;
 
 @end
