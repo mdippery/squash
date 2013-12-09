@@ -20,7 +20,7 @@
 
 @interface SQGemManager : NSObject
 
-+ (SQGemManager *)defaultManager;
++ (id)manager;
 
 - (NSString *)gemDirectory;
 

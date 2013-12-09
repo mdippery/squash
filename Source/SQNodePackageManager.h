@@ -20,7 +20,7 @@
 
 @interface SQNodePackageManager : NSObject
 
-+ (SQNodePackageManager *)defaultManager;
++ (id)manager;
 
 - (NSString *)nodeBinDirectory;
 - (NSString *)nodePackageDirectory;

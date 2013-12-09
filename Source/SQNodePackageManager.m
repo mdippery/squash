@@ -29,14 +29,9 @@
 
 @implementation SQNodePackageManager
 
-+ (SQNodePackageManager *)defaultManager
++ (id)manager
 {
-    static SQNodePackageManager *manager = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        manager = [[super allocWithZone:nil] init];
-    });
-    return manager;
+    return [[[self alloc] init] autorelease];
 }
 
 - (NSString *)nodeBinDirectory
@@ -107,30 +102,6 @@
 
     [task release];
     return success;
-}
-
-#pragma mark Singleton
-
-+ (id)allocWithZone:(NSZone *)zone NS_RETURNS_NOT_RETAINED
-{
-    return [self defaultManager];
-}
-
-- (id)retain
-{
-    return self;
-}
-
-- (NSUInteger)retainCount
-{
-    return UINT_MAX;
-}
-
-- (oneway void)release {}
-
-- (id)autorelease
-{
-    return self;
 }
 
 @end

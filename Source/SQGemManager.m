@@ -27,14 +27,9 @@
 
 @implementation SQGemManager
 
-+ (SQGemManager *)defaultManager
++ (id)manager
 {
-    static SQGemManager *manager = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        manager = [[super allocWithZone:nil] init];
-    });
-    return manager;
+    return [[[self alloc] init] autorelease];
 }
 
 - (NSString *)gemDirectory
@@ -99,7 +94,7 @@
     [task setLaunchPath:launchPath];
     [task setArguments:args];
 
-    NSString *gemDir = [[SQGemManager defaultManager] gemDirectory];
+    NSString *gemDir = [self gemDirectory];
     NSDictionary *env = [NSDictionary dictionaryWithObject:gemDir forKey:@"GEM_HOME"];
     [task setEnvironment:env];
 
@@ -110,30 +105,6 @@
 
     [task release];
     return success;
-}
-
-#pragma mark Singleton
-
-+ (id)allocWithZone:(NSZone *)zone NS_RETURNS_NOT_RETAINED
-{
-    return [self defaultManager];
-}
-
-- (id)retain
-{
-    return self;
-}
-
-- (NSUInteger)retainCount
-{
-    return UINT_MAX;
-}
-
-- (oneway void)release {}
-
-- (id)autorelease
-{
-    return self;
 }
 
 @end

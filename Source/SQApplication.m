@@ -129,7 +129,10 @@
 {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
-        BOOL success = [[SQGemManager defaultManager] installGemWithName:@"sass" version:@"3.2.12"];
+        SQGemManager *manager = [SQGemManager manager];
+        BOOL success;
+
+        success = [manager installGemWithName:@"sass" version:@"3.2.12"];
         if (!success) {
             NSLog(@"Could not install Sass");
             return;
@@ -141,7 +144,7 @@
         NSString *cssPath = @"/tmp/scss-test.css";
         NSArray *args = [NSArray arrayWithObjects:scssPath, cssPath, nil];
 
-        success = [[SQGemManager defaultManager] launchGemExecutableNamed:@"sass" withArguments:args];
+        success = [manager launchGemExecutableNamed:@"sass" withArguments:args];
         if (!success) {
             NSLog(@"Could not launch Sass");
             return;
@@ -159,8 +162,9 @@
 {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
+        SQNodePackageManager *manager = [SQNodePackageManager manager];
         BOOL success;
-        SQNodePackageManager *manager = [SQNodePackageManager defaultManager];
+
         NSURL *lessURL = [NSURL URLWithString:@"https://github.com/less/less.js/tarball/master"];
         success = [manager installNodePackage:@"less" fromURL:lessURL];
         if (!success) {
