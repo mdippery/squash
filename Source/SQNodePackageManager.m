@@ -16,10 +16,8 @@
  */
 
 #import "SQNodePackageManager.h"
-
-#import "SQNodePackageDownload.h"
-
 #import "NSFileManager+Squash.h"
+#import "SQNodePackageDownload.h"
 
 
 @interface SQNodePackageManager ()
@@ -113,9 +111,9 @@
 
 #pragma mark Singleton
 
-+ (id)allocWithZone:(NSZone *)zone
++ (id)allocWithZone:(NSZone *)zone NS_RETURNS_NOT_RETAINED
 {
-    return [[self defaultManager] retain];
+    return [self defaultManager];
 }
 
 - (id)retain
