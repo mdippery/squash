@@ -1,4 +1,5 @@
 .DS_Store
 Pods/
+Squash.xcworkspace/
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
