@@ -86,16 +86,16 @@
 
 - (BOOL)launchExecutableFromPackage:(NSString *)package named:(NSString *)name withArguments:(NSArray *)args
 {
-    NSString *lessc = [self pathToExecutable:name forPackage:package];
+    NSString *bin = [self pathToExecutable:name forPackage:package];
     NSTask *task = [[NSTask alloc] init];
-    [task setLaunchPath:lessc];
+    [task setLaunchPath:bin];
     [task setArguments:args];
 
     NSString *binPath = [self nodeBinDirectory];
     NSDictionary *env = [NSDictionary dictionaryWithObject:binPath forKey:@"PATH"];
     [task setEnvironment:env];
 
-    NSLog(@"Launching Node binary at path: %@ with env: %@ and args: %@", lessc, env, args);
+    NSLog(@"Launching Node binary at path: %@ with env: %@ and args: %@", bin, env, args);
     [task launch];
     [task waitUntilExit];
     BOOL success = [task terminationStatus] == 0;
