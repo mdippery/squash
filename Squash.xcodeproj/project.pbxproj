@@ -106,6 +106,7 @@
 		B78D808D18210BAF009BB437 /* NSFileManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerTests.m; sourceTree = "<group>"; };
 		B7B421521822178C00AF86E9 /* scss-test.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "scss-test.scss"; sourceTree = "<group>"; };
 		B7DF2DE71C82259700612DFC /* libpitch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpitch.a; path = Helpers/libpitch/libpitch.a; sourceTree = "<group>"; };
+		B7B8B7BF196928820025FC4E /* SQPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQPlugin.h; sourceTree = "<group>"; };
 		B7FD21CB182034D10063EA2D /* jsmin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsmin; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FD21D6182035100063EA2D /* jsmin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsmin.c; path = Helpers/jsmin/jsmin.c; sourceTree = SOURCE_ROOT; };
 		B7FD9F70181FA06900D85B0A /* Squash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +239,14 @@
 			name = Additions;
 			sourceTree = "<group>";
 		};
+		B7ABC61919692821002A91C9 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				B7B8B7BF196928820025FC4E /* SQPlugin.h */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
 		B7B42154182217A600AF86E9 /* Test Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +325,7 @@
 				B75F4401181FA284006DE91F /* Interface */,
 				B76659A9184DCA5700649783 /* Package Management */,
 				B78D808718210A63009BB437 /* Additions */,
+				B7ABC61919692821002A91C9 /* Plugins */,
 				B75F4400181FA172006DE91F /* Resources */,
 				B7FD9F7A181FA06900D85B0A /* Other Sources */,
 			);
