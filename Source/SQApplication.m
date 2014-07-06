@@ -19,6 +19,7 @@
 
 #import "SQGemManager.h"
 #import "SQNodePackageManager.h"
+#import "SQPlugin.h"
 #import "SQStatusMenuItemView.h"
 
 #import <dispatch/dispatch.h>
@@ -26,6 +27,7 @@
 
 @interface SQApplication ()
 - (void)activateStatusMenu;
+- (void)loadAndTestPlugins;
 @end
 
 
@@ -56,11 +58,44 @@
     return [NSImage imageNamed:@"StatusIcon.png"];
 }
 
+- (void)loadAndTestPlugins
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *pluginsPath = [bundle builtInPlugInsPath];
+    //NSLog(@"Checking plugins path: %@", pluginsPath);
+
+    NSMutableArray *allPluginPaths = [NSMutableArray array];
+
+    NSDirectoryEnumerator *pluginEnum = [[NSFileManager defaultManager] enumeratorAtPath:pluginsPath];
+    NSString *pluginPath;
+    while (pluginPath = [pluginEnum nextObject]) {
+        //NSLog(@"Checking plugin path: %@", pluginPath);
+        if ([[pluginPath pathExtension] isEqualToString:@"bundle"]) {
+            NSString *fullPluginPath = [pluginsPath stringByAppendingPathComponent:pluginPath];
+            [allPluginPaths addObject:fullPluginPath];
+        }
+    }
+
+    for (NSString *pluginPath in allPluginPaths) {
+        NSBundle *plugin = [NSBundle bundleWithPath:pluginPath];
+        if (!plugin) {
+            NSLog(@"Could not load plugin: %@", pluginPath);
+            continue;
+        }
+        //NSLog(@"Found plugin: %@", pluginPath);
+        Class SQPluginClass = [plugin principalClass];
+        id<SQPlugin> pluginInstance = [SQPluginClass manager];
+        [pluginInstance install:NULL];
+        [pluginInstance debug];
+    }
+}
+
 #pragma mark NSApp Delegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+    [self loadAndTestPlugins];
 }
 
 #pragma mark NSUserNotificationCenter Delegate
