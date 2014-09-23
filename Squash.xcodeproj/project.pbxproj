@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B41AD48B5BA647D1BEDCD3DE /* libPods-Squash.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781ECFACF0F14B2E8544E305 /* libPods-Squash.a */; };
 		B71D4ACA1850631D00AF2812 /* SQNodePackageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B71D4AC91850631D00AF2812 /* SQNodePackageManager.m */; };
 		B71D4ACD185074AF00AF2812 /* SQNodePackageDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = B71D4ACC185074AF00AF2812 /* SQNodePackageDownload.m */; };
 		B75F4404181FA2A2006DE91F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75F4406181FA2A2006DE91F /* MainMenu.xib */; };
@@ -16,6 +15,8 @@
 		B760BF921820813800EABBCD /* jsmin-test.js in Resources */ = {isa = PBXBuildFile; fileRef = B760BF911820812800EABBCD /* jsmin-test.js */; };
 		B76659AC184DCA7300649783 /* SQGemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B76659AB184DCA7300649783 /* SQGemManager.m */; };
 		B7716D5118222E73001308E3 /* node in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7716D5018222E64001308E3 /* node */; };
+		B77B27791852CB24006A8CC9 /* libpitch.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B77B27731852CB23006A8CC9 /* libpitch.1.dylib */; };
+		B77B277B1852CB64006A8CC9 /* libpitch.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B77B27731852CB23006A8CC9 /* libpitch.1.dylib */; };
 		B77B277D1852E415006A8CC9 /* less-test.less in Resources */ = {isa = PBXBuildFile; fileRef = B77B277C1852E415006A8CC9 /* less-test.less */; };
 		B78D808B18210A9D009BB437 /* NSFileManager+Squash.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */; };
 		B78D808E18210BAF009BB437 /* NSFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808D18210BAF009BB437 /* NSFileManagerTests.m */; };
@@ -57,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B77B277B1852CB64006A8CC9 /* libpitch.1.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +85,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		781ECFACF0F14B2E8544E305 /* libPods-Squash.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Squash.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71D4AC81850631D00AF2812 /* SQNodePackageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNodePackageManager.h; sourceTree = "<group>"; };
 		B71D4AC91850631D00AF2812 /* SQNodePackageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNodePackageManager.m; sourceTree = "<group>"; };
 		B71D4ACB185074AF00AF2812 /* SQNodePackageDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNodePackageDownload.h; sourceTree = "<group>"; };
@@ -96,6 +97,12 @@
 		B76659AA184DCA7300649783 /* SQGemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGemManager.h; sourceTree = "<group>"; };
 		B76659AB184DCA7300649783 /* SQGemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQGemManager.m; sourceTree = "<group>"; };
 		B7716D5018222E64001308E3 /* node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = node; path = Helpers/node/node; sourceTree = SOURCE_ROOT; };
+		B77B27731852CB23006A8CC9 /* libpitch.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpitch.1.dylib; path = Helpers/libpitch/libpitch.1.dylib; sourceTree = "<group>"; };
+		B77B27741852CB23006A8CC9 /* libtar_listhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libtar_listhash.h; path = Helpers/libpitch/libtar_listhash.h; sourceTree = "<group>"; };
+		B77B27751852CB23006A8CC9 /* libtar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libtar.h; path = Helpers/libpitch/libtar.h; sourceTree = "<group>"; };
+		B77B27761852CB24006A8CC9 /* Pitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pitch.h; path = Helpers/libpitch/Pitch.h; sourceTree = "<group>"; };
+		B77B27771852CB24006A8CC9 /* TAREntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAREntry.h; path = Helpers/libpitch/TAREntry.h; sourceTree = "<group>"; };
+		B77B27781852CB24006A8CC9 /* TARFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TARFile.h; path = Helpers/libpitch/TARFile.h; sourceTree = "<group>"; };
 		B77B277C1852E415006A8CC9 /* less-test.less */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "less-test.less"; sourceTree = "<group>"; };
 		B78D808918210A9D009BB437 /* NSFileManager+Squash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Squash.h"; sourceTree = "<group>"; };
 		B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Squash.m"; sourceTree = "<group>"; };
@@ -120,7 +127,6 @@
 		B7FD9F92181FA06900D85B0A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B7FD9F99181FA06900D85B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7FD9F9B181FA06900D85B0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FA202F9962ED422BB3CA0E7A /* Pods-Squash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squash.xcconfig"; path = "Pods/Pods-Squash.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +141,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77B27791852CB24006A8CC9 /* libpitch.1.dylib in Frameworks */,
 				B7FD9F74181FA06900D85B0A /* Cocoa.framework in Frameworks */,
-				B41AD48B5BA647D1BEDCD3DE /* libPods-Squash.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +218,19 @@
 			name = node;
 			sourceTree = "<group>";
 		};
+		B77B27721852CB08006A8CC9 /* libpitch */ = {
+			isa = PBXGroup;
+			children = (
+				B77B27731852CB23006A8CC9 /* libpitch.1.dylib */,
+				B77B27761852CB24006A8CC9 /* Pitch.h */,
+				B77B27771852CB24006A8CC9 /* TAREntry.h */,
+				B77B27781852CB24006A8CC9 /* TARFile.h */,
+				B77B27741852CB23006A8CC9 /* libtar_listhash.h */,
+				B77B27751852CB23006A8CC9 /* libtar.h */,
+			);
+			name = libpitch;
+			sourceTree = "<group>";
+		};
 		B78D808718210A63009BB437 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +276,6 @@
 				B7FD9F97181FA06900D85B0A /* Tests */,
 				B7FD9F72181FA06900D85B0A /* Frameworks */,
 				B7FD9F71181FA06900D85B0A /* Products */,
-				FA202F9962ED422BB3CA0E7A /* Pods-Squash.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,7 +295,7 @@
 				B7FD9F73181FA06900D85B0A /* Cocoa.framework */,
 				B7FD9F92181FA06900D85B0A /* XCTest.framework */,
 				B7FD9F75181FA06900D85B0A /* Other Frameworks */,
-				781ECFACF0F14B2E8544E305 /* libPods-Squash.a */,
+				B77B27721852CB08006A8CC9 /* libpitch */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -358,13 +376,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7FD9FA1181FA06900D85B0A /* Build configuration list for PBXNativeTarget "Squash" */;
 			buildPhases = (
-				8F1960B724304B25BD687FFD /* Check Pods Manifest.lock */,
 				B7FD9F6C181FA06900D85B0A /* Sources */,
 				B7FD9F6D181FA06900D85B0A /* Frameworks */,
 				B7FD9F6E181FA06900D85B0A /* Resources */,
 				B7FD21DA1820368A0063EA2D /* CopyFiles */,
 				B77B277A1852CB54006A8CC9 /* CopyFiles */,
-				794845264580441CB9A5303C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -454,39 +470,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		794845264580441CB9A5303C /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Squash-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8F1960B724304B25BD687FFD /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B7FD21C7182034D10063EA2D /* Sources */ = {
@@ -659,7 +642,6 @@
 		};
 		B7FD9FA2181FA06900D85B0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA202F9962ED422BB3CA0E7A /* Pods-Squash.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -669,14 +651,18 @@
 				GCC_PREFIX_HEADER = "Source/Squash-Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mdippery/Projects/squash/Helpers/libpitch,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Helpers/libpitch";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		B7FD9FA3181FA06900D85B0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA202F9962ED422BB3CA0E7A /* Pods-Squash.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -686,7 +672,12 @@
 				GCC_PREFIX_HEADER = "Source/Squash-Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mdippery/Projects/squash/Helpers/libpitch,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Helpers/libpitch";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
