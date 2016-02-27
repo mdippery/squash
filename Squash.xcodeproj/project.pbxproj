@@ -15,12 +15,11 @@
 		B760BF921820813800EABBCD /* jsmin-test.js in Resources */ = {isa = PBXBuildFile; fileRef = B760BF911820812800EABBCD /* jsmin-test.js */; };
 		B76659AC184DCA7300649783 /* SQGemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B76659AB184DCA7300649783 /* SQGemManager.m */; };
 		B7716D5118222E73001308E3 /* node in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7716D5018222E64001308E3 /* node */; };
-		B77B27791852CB24006A8CC9 /* libpitch.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B77B27731852CB23006A8CC9 /* libpitch.1.dylib */; };
-		B77B277B1852CB64006A8CC9 /* libpitch.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B77B27731852CB23006A8CC9 /* libpitch.1.dylib */; };
 		B77B277D1852E415006A8CC9 /* less-test.less in Resources */ = {isa = PBXBuildFile; fileRef = B77B277C1852E415006A8CC9 /* less-test.less */; };
 		B78D808B18210A9D009BB437 /* NSFileManager+Squash.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */; };
 		B78D808E18210BAF009BB437 /* NSFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D808D18210BAF009BB437 /* NSFileManagerTests.m */; };
 		B7B421531822178C00AF86E9 /* scss-test.scss in Resources */ = {isa = PBXBuildFile; fileRef = B7B421521822178C00AF86E9 /* scss-test.scss */; };
+		B7DF2DE81C82259700612DFC /* libpitch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DF2DE71C82259700612DFC /* libpitch.a */; };
 		B7FD21D7182035100063EA2D /* jsmin.c in Sources */ = {isa = PBXBuildFile; fileRef = B7FD21D6182035100063EA2D /* jsmin.c */; };
 		B7FD21DB182036990063EA2D /* jsmin in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7FD21CB182034D10063EA2D /* jsmin */; };
 		B7FD9F74181FA06900D85B0A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD9F73181FA06900D85B0A /* Cocoa.framework */; };
@@ -58,7 +57,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B77B277B1852CB64006A8CC9 /* libpitch.1.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +95,6 @@
 		B76659AA184DCA7300649783 /* SQGemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGemManager.h; sourceTree = "<group>"; };
 		B76659AB184DCA7300649783 /* SQGemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQGemManager.m; sourceTree = "<group>"; };
 		B7716D5018222E64001308E3 /* node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = node; path = Helpers/node/node; sourceTree = SOURCE_ROOT; };
-		B77B27731852CB23006A8CC9 /* libpitch.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpitch.1.dylib; path = Helpers/libpitch/libpitch.1.dylib; sourceTree = "<group>"; };
 		B77B27741852CB23006A8CC9 /* libtar_listhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libtar_listhash.h; path = Helpers/libpitch/libtar_listhash.h; sourceTree = "<group>"; };
 		B77B27751852CB23006A8CC9 /* libtar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libtar.h; path = Helpers/libpitch/libtar.h; sourceTree = "<group>"; };
 		B77B27761852CB24006A8CC9 /* Pitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pitch.h; path = Helpers/libpitch/Pitch.h; sourceTree = "<group>"; };
@@ -108,6 +105,7 @@
 		B78D808A18210A9D009BB437 /* NSFileManager+Squash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Squash.m"; sourceTree = "<group>"; };
 		B78D808D18210BAF009BB437 /* NSFileManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerTests.m; sourceTree = "<group>"; };
 		B7B421521822178C00AF86E9 /* scss-test.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "scss-test.scss"; sourceTree = "<group>"; };
+		B7DF2DE71C82259700612DFC /* libpitch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpitch.a; path = Helpers/libpitch/libpitch.a; sourceTree = "<group>"; };
 		B7FD21CB182034D10063EA2D /* jsmin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsmin; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FD21D6182035100063EA2D /* jsmin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsmin.c; path = Helpers/jsmin/jsmin.c; sourceTree = SOURCE_ROOT; };
 		B7FD9F70181FA06900D85B0A /* Squash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B77B27791852CB24006A8CC9 /* libpitch.1.dylib in Frameworks */,
+				B7DF2DE81C82259700612DFC /* libpitch.a in Frameworks */,
 				B7FD9F74181FA06900D85B0A /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +219,7 @@
 		B77B27721852CB08006A8CC9 /* libpitch */ = {
 			isa = PBXGroup;
 			children = (
-				B77B27731852CB23006A8CC9 /* libpitch.1.dylib */,
+				B7DF2DE71C82259700612DFC /* libpitch.a */,
 				B77B27761852CB24006A8CC9 /* Pitch.h */,
 				B77B27771852CB24006A8CC9 /* TAREntry.h */,
 				B77B27781852CB24006A8CC9 /* TARFile.h */,
@@ -654,7 +652,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Helpers/libpitch",
+					"$(PROJECT_DIR)/Helpers/libpitch",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.monkey-robot.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -676,7 +674,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Helpers/libpitch",
+					"$(PROJECT_DIR)/Helpers/libpitch",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.monkey-robot.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
