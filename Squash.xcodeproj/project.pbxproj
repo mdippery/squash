@@ -415,7 +415,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SQ;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Michael Dippery";
 				TargetAttributes = {
 					B7FD9F90181FA06900D85B0A = {
