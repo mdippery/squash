@@ -17,7 +17,7 @@
 
 #import "SQNodePackageDownload.h"
 
-#import <Pitch.h>
+#import "Pitch.h"
 
 
 @interface SQNodePackageDownload ()
